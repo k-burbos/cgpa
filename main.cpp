@@ -6,6 +6,7 @@ using namespace std;
 void addSubjects(); 
 void checkHeader(); // This function checks if it should add the header "Subject Code, Grade, Unit" or not.
 void makeFolder(string newFolderName); 
+double calcGWA(); // This function just calculates the GWA.
 
 int main(int argc, char** argv) {
 	int answer; 
@@ -25,7 +26,7 @@ int main(int argc, char** argv) {
 				break;
 		}
 	} while(answer != 3); 
-	
+	calcGWA();
 	return 0;
 }
 
@@ -66,3 +67,31 @@ void makeFolder(string newFolderName) {
 		cout << "Folder has been made succesfully!"; 
 	}
 }
+
+double calcGWA(){
+	fstream f;
+	string l = "";
+	int location = 0;
+	double ret = 0, unitTotal = 0;
+	
+	f.open("grades.csv", ios::in);
+	while(getline(f,l)){
+		location = l.find(',');
+		string tmp = l.substr(0,location);
+		l = l.substr(location + 1, l.length());
+		location = l.find(',');
+		double grade = std::stod(l.substr(0,location));
+		l = l.substr(location + 1, l.length());
+		double unit = std::stod(l);
+		ret += grade * unit;
+		unitTotal += unit;
+		std::cout << tmp << ": " << grade << ", " << unit << endl;
+	}
+	
+	std::cout << ret / unitTotal; // debugging purposes
+	return ret / unitTotal;
+}
+
+
+
+
