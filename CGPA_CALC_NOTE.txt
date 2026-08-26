@@ -1,0 +1,29 @@
+1. Add (Year/Sem/Grades)
+	1. Add Year
+	2. Add Sem
+	3. Add Grades
+2. Edit Grades
+3. Display Grades and Current Honor (cum)
+4. Remove (Year/Sem/Grades)
+	1. Remove Year
+	2. Remove Sem
+	3. Remove Grades
+5. Exit
+
+
+
+
+
+////// File Structure
+
+Grades
+----1st Year
+--------1st Sem
+------------grades.csv
+--------2nd Sem
+------------grades.csv
+----2nd Year
+--------1st Sem
+------------grades.csv
+--------2nd Sem
+------------grades.csv
