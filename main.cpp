@@ -1,6 +1,7 @@
 #include <fstream>
 #include <string>
 #include <iostream>
+#include <cstdio>
 
 using namespace std; 
 
@@ -9,6 +10,11 @@ void checkHeader(); // This function checks if it should add the header "Subject
 void makeFile(string newFileName); 
 double calcGWA(); // This function just calculates the GWA.
 void addGWA();
+void deleteFile();
+void displayGrades(); /* This function:
+							asks for the Year and Semester, after which the grades will be displayed.
+							Only the latter has been implemented so far;
+					  */ 
 
 void addYear();
 
@@ -49,6 +55,14 @@ int main(int argc, char** argv) {
 //				newFileName += ".csv"; 
 //				makeFile(newFileName); 
 //				break;
+			case 3:
+				displayGrades();
+				break;
+			case 4:
+				deleteFile();
+				break;
+			case 5:
+				break;
 		}
 	} while(mainOp != 3); 
 	calcGWA();
@@ -138,6 +152,33 @@ double calcGWA(){
 	return ret / unitTotal;
 }
 
+void displayGrades(){
+	fstream f;
+	string l;
+	int location = 0;
+	f.open("grades.csv", ios::in);
+	std::cout << std::endl;
+	while(getline(f,l)){
+		std::cout << "|\t";
+		location = l.find(',');
+		string tmp = l.substr(0,location);
+		std::cout << tmp;
+		if(tmp.length() >= 9) std::cout << "\t|\t";
+		else std::cout << "\t\t|\t";
+		l = l.substr(location + 1, l.length());
+		location = l.find(',');
+		tmp = l.substr(0,location);
+		double d = std::stod(tmp);
+		std::printf("%.1f", d);
+		std::cout << "\t|\t";
+		l = l.substr(location + 1, l.length());
+		tmp = l;
+		d = std::stod(tmp);
+		std::printf("%.1f", d);
+		std::cout << "\t|\n";
+//		std::cout << tmp << ": " << grade << ", " << unit << endl;
+	}
+}
 
 
 
