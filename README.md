@@ -14,7 +14,13 @@ AUGUST 27, 2026
 - added displayGrades() function
 - functionalities include taking the year and semester as input, and displaying the grades as output;
 - only the latter functionality has been added so far.
-- added addYear() functionality. It now creates a folder inside of default empty folder "Year". For some reason, maybe something deeper in the CreateDirectoryA() function, it does not create a file if the file with the same year already exists. 
+- added addYear() functionality. It now creates a folder inside of default empty folder "Year". 
 
 AUGUST 29, 2026
-- attempt to fix addYear() not creating a Year folder.
+- added addSemester(). Implemented a print statement to tell you if file already exists. 
+- removed addSubjects(), replaced with fillGrades() with improved code. 
+- removed checkHeader(); 
+- added filePathExists() to check if grades.csv file under that year and semester has already been made. 
+        FIX LOG
+        - fixed addYear() not creating a folder. Implemented a print statement to tell you if file already exists. 
+        - fixed addGrades() function making a folder instead of a .csv file.
