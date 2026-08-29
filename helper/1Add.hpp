@@ -114,6 +114,12 @@ void addYear()
 		name += "th ";
 	}
 
+	string checkIfYearFolderExists = "Year"; 
+
+	if(!directoryExists(checkIfYearFolderExists)) {
+		CreateDirectoryA("Year", NULL);
+	}
+
 	cout << "year folder.\n\n";
 	if(directoryExists(name)) {
 		cout << "This year has already been made.\n\n"; 

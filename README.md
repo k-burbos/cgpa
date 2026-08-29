@@ -15,3 +15,6 @@ AUGUST 27, 2026
 - functionalities include taking the year and semester as input, and displaying the grades as output;
 - only the latter functionality has been added so far.
 - added addYear() functionality. It now creates a folder inside of default empty folder "Year". For some reason, maybe something deeper in the CreateDirectoryA() function, it does not create a file if the file with the same year already exists. 
+
+AUGUST 29, 2026
+- attempt to fix addYear() not creating a Year folder.
