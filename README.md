@@ -24,3 +24,8 @@ AUGUST 29, 2026
         FIX LOG
         - fixed addYear() not creating a folder. Implemented a print statement to tell you if file already exists. 
         - fixed addGrades() function making a folder instead of a .csv file.
+- added loadData() at 3Display.hpp. loads the file data onto subjectData, header data onto header, and the max widths for each column onto widths
+- added displayGrades() at 3Display.hpp which displays the grades.
+- added makeBorder() at 3Display.hpp which creates the border (the thing with the plus thingy);
+- added printCentered() which prints centered text within a given width;
+- added printLeft() which prints left-aligned text within a given width. mainly used for the subject code; 
