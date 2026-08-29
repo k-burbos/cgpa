@@ -21,6 +21,11 @@ AUGUST 29, 2026
 - removed addSubjects(), replaced with fillGrades() with improved code. 
 - removed checkHeader(); 
 - added filePathExists() to check if grades.csv file under that year and semester has already been made. 
+- added removeYear() function. 
+- added removeSemester() function. 
+- added removeGrades() function.
+- added deleteDirectory() function; 
         FIX LOG
         - fixed addYear() not creating a folder. Implemented a print statement to tell you if file already exists. 
         - fixed addGrades() function making a folder instead of a .csv file.
+        - fixed issue with removeYear() where it fails to delete year folders if they are not empty.
