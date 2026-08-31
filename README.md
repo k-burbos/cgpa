@@ -25,6 +25,10 @@ AUGUST 29, 2026
 - added removeSemester() function. 
 - added removeGrades() function.
 - added deleteDirectory() function; 
+- removed makeFile() function; obsolete.
+- removed directoryExists() function; replaced by <filesystem> imported function.
+- removed filePathExists() function. 
+- removed deleteDirectory() function, replaced by remove_all.
         FIX LOG
         - fixed addYear() not creating a folder. Implemented a print statement to tell you if file already exists. 
         - fixed addGrades() function making a folder instead of a .csv file.

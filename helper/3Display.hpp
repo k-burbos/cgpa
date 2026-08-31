@@ -131,8 +131,8 @@ void displaySemester(){
 		suffix = "th";
 		name += "th";
 	}
-
-	if (directoryExists(name))
+	fs::path baseDir(name);
+	if (fs::exists(baseDir))
 	{
 		cout << "First, second, or third? (Answer \"First\", \"Second\", or \"Third\".): ";
 		string semNumber;
@@ -143,7 +143,7 @@ void displaySemester(){
 			return;
 		}
 		name += "\\" + semNumber;
-		if (directoryExists(name))
+		if (fs::exists(baseDir))
 		{
 			fileName = name + "\\grades.csv";
 			std::cout << endl;
