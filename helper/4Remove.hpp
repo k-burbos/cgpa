@@ -33,6 +33,7 @@ void caseFourMain()
             removeGrades();
             break;
         case 4:
+            std::cout << "\033[2J\033[1;1H";
             return;
         }
     } while (firstOp != 4);
