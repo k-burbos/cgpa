@@ -15,11 +15,4 @@ void caseTwoMain(){
             3. Remove grades on certain files
             4. Exit
     */
-
-    //				string newFileName;
-    //				cout << "What is the name of this grade folder? (Please, do not use spaces): ";
-    //				cin >> newFileName;
-    //				newFileName += ".csv";
-    //				makeFile(newFileName);
-    //				break;
 }

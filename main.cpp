@@ -2,6 +2,7 @@
 
 int main(int argc, char **argv)
 {
+	std::cout << "\033[2J\033[1;1H";
 	int mainOp;
 	do
 	{
@@ -21,6 +22,7 @@ int main(int argc, char **argv)
 				caseFourMain();
 				break;
 			case 5:
+				std::cout << "\033[2J\033[1;1H";
 				return 0;
 		}
 	} while (mainOp != 5);
